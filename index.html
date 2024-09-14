@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Purple Themed Page with Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #2c003e;
+            color: #e0e0e0;
+        }
+
+        header {
+            width: 100%;
+            background-color: #3a005f;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-title {
+            font-size: 32px;
+            color: #d1b3ff;
+            margin: 0;
+        }
+
+        .nav-menu {
+            margin-top: 10px;
+        }
+
+        .nav-menu a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav-menu a:hover {
+            color: #d1b3ff;
+            text-decoration: underline;
+        }
+
+        .page-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 100px 0 20px;
+            text-align: center;
+            color: #d1b3ff;
+        }
+
+        .search-container {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .box {
+            flex: 0 0 calc(33.333% - 20px);
+            background-color: #3a005f;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box .word {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .box .details {
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+
+        footer {
+            background-color: #3a005f;
+            color: #e0e0e0;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #d1b3ff;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer a {
+            color: #d1b3ff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-title">Keyword hub</div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="page-title">Welcome To Alkakeyword</div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for keywords, authors, or dates...">
+    </div>
+    <div class="container" id="boxContainer">
+        <a href="page1.html" class="box" data-keyword="Manwib" data-author="Author 1" data-date="Date 1">
+            <div class="word">Manwib</div>
+            <div class="details">Author Unknown • Date 2022</div>
+        </a>
+        <a href="page2.html" class="box" data-keyword="Hsan" data-author="Author 2" data-date="Date 2">
+            <div class="word">Hsan</div>
+            <div class="details">Author Hassan ft Tony • Date 2022</div>
+        </a>
+        <a href="page3.html" class="box" data-keyword="Pajon" data-author="Author 3" data-date="Date 3">
+            <div class="word">Pajon</div>
+            <div class="details">Author Tony ft Hassan • Date 2021</div>
+        </a>
+        <a href="page1.html" class="box" data-keyword="Zabrinioh" data-author="Author 1" data-date="Date 1">
+            <div class="word">Zabrinioh</div>
+            <div class="details">Author Tony • Date 2024</div>
+        </a>
+        <a href="page2.html" class="box" data-keyword="Zabrinioh mazabran" data-author="Author 2" data-date="Date 2">
+            <div class="word">Zabrinioh el Mzabaran</div>
+            <div class="details">Author le Tony • Date 2024</div>
+        </a>
+        <a href="page3.html" class="box" data-keyword="Benji Bebbew" data-author="Author 3" data-date="Date 3">
+            <div class="word">Benji Bebbew</div>
+            <div class="details">Author Hsan • Date 2024</div>
+        </a>
+        <a href="page1.html" class="box" data-keyword="Say Wallah" data-author="Author 1" data-date="Date 1">
+            <div class="word">Say Wallah</div>
+            <div class="details">Author Le Irani • Date 2024</div>
+        </a>
+        <a href="page2.html" class="box" data-keyword="Moussanse" data-author="Author 2" data-date="Date 2">
+            <div class="word">Moussanse</div>
+            <div class="details">Author Le Tony • Date 2024</div>
+        </a>
+        <a href="page3.html" class="box" data-keyword="Zenje" data-author="Author 3" data-date="Date 3">
+            <div class="word">Zenje</div>
+            <div class="details">Author Unknown • Date unknown</div>
+        </a>
+        <a href="page1.html" class="box" data-keyword="El mawesis" data-author="Author 1" data-date="Date 1">
+            <div class="word">El Mawesis </div>
+            <div class="details">Author Le Tony • Date 2023</div>
+        </a>
+        <a href="page2.html" class="box" data-keyword="Keyword 2" data-author="Author 2" data-date="Date 2">
+            <div class="word">Keyword 11</div>
+            <div class="details">Author 11 • Date 2</div>
+        </a>
+        <a href="page3.html" class="box" data-keyword="Keyword 3" data-author="Author 3" data-date="Date 3">
+            <div class="word">Keyword 12</div>
+            <div class="details">Author 12 • Date 3</div>
+        </a>
+        <a href="page1.html" class="box" data-keyword="Keyword 1" data-author="Author 1" data-date="Date 1">
+            <div class="word">Keyword 13</div>
+            <div class="details">Author 13 • Date 1</div>
+        </a>
+        <a href="page2.html" class="box" data-keyword="Keyword 2" data-author="Author 2" data-date="Date 2">
+            <div class="word">Keyword 14</div>
+            <div class="details">Author 14 • Date 2</div>
+        </a>
+
+        <!-- Add more boxes as needed -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Website Name</p>
+        <p><a href="index.html">Back to Menu</a></p>
+        <p>
+            <a href="about.html">Privacy Policy</a> |
+            <a href="services.html">Terms of Service</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function () {
+            var input = this.value.toLowerCase();
+            var boxes = document.querySelectorAll('.box');
+
+            boxes.forEach(function (box) {
+                var keyword = box.getAttribute('data-keyword').toLowerCase();
+                var author = box.getAttribute('data-author').toLowerCase();
+                var date = box.getAttribute('data-date').toLowerCase();
+
+                if (keyword.includes(input) || author.includes(input) || date.includes(input)) {
+                    box.style.display = 'flex';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+

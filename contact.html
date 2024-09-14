@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Keyword</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #2c003e;
+            color: #e0e0e0;
+        }
+
+        header {
+            width: 100%;
+            background-color: #3a005f;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-title {
+            font-size: 32px;
+            color: #d1b3ff;
+            margin: 0;
+        }
+
+        .nav-menu {
+            margin-top: 10px;
+        }
+
+        .nav-menu a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav-menu a:hover {
+            color: #d1b3ff;
+            text-decoration: underline;
+        }
+
+        .page-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 100px 0 20px;
+            text-align: center;
+            color: #d1b3ff;
+        }
+
+        .contact-form {
+            background-color: #3a005f;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .contact-form label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+            color: #e0e0e0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background-color: #d1b3ff;
+            color: #2c003e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .message-sent {
+            color: #b3ffb3;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #3a005f;
+            color: #e0e0e0;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #d1b3ff;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #d1b3ff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-title">Keyword</div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-title">Contact Us</div>
+
+    <div class="contact-form">
+        <!-- Modify the form to submit via POST method to send_mail.php -->
+        <form action="send_mail.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <div id="confirmationMessage" class="message-sent" style="display: none;">
+            Message Sent! We will get back to you shortly.
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Website Name</p>
+        <p><a href="index.html">Back to Menu</a></p>
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        // You can add this script for client-side feedback
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get the confirmation message div and show it
+            var confirmationMessage = document.getElementById('confirmationMessage');
+            confirmationMessage.style.display = 'block';
+
+            // Optionally, you could clear the form inputs after submission
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('message').value = '';
+
+            // You can also proceed with sending the data to the server here
+            form.submit();
+        });
+    </script>
+</body>
+
+</html>

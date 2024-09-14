@@ -1,0 +1,26 @@
+[
+    {
+        "keyword": "Keyword 1",
+        "author": "Author 1",
+        "date": "Date 1",
+        "page": "page1.html"
+    },
+    {
+        "keyword": "Keyword 2",
+        "author": "Author 2",
+        "date": "Date 2",
+        "page": "page2.html"
+    },
+    {
+        "keyword": "Keyword 3",
+        "author": "Author 3",
+        "date": "Date 3",
+        "page": "page3.html"
+    },
+    {
+        "keyword": "Keyword 4",
+        "author": "Author 1",
+        "date": "Date 4",
+        "page": "page4.html"
+    }
+]

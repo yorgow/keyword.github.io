@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works by Author 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #2c003e; /* Dark purple background */
+            color: #e0e0e0; /* Light gray text color */
+        }
+        .page-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            color: #d1b3ff; /* Light purple for the title */
+        }
+        .back-button {
+            font-size: 18px;
+            color: #d1b3ff; /* Light purple for the button */
+            text-decoration: none;
+            margin: 20px;
+            padding: 10px 20px;
+            border: 2px solid #d1b3ff; /* Light purple border */
+            border-radius: 5px;
+            background-color: #3a005f; /* Dark purple background */
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .back-button:hover {
+            background-color: #d1b3ff; /* Light purple background on hover */
+            color: #2c003e; /* Dark purple text color on hover */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .box {
+            flex: 0 0 calc(33.333% - 20px);
+            background-color: #3a005f; /* Slightly lighter dark purple for boxes */
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box:hover {
+            transform: scale(1.05); /* Slightly enlarge the box on hover */
+        }
+        .box .word {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff; /* White color for keywords */
+        }
+        .box .details {
+            font-size: 14px;
+            color: #b3b3b3; /* Light gray for details */
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">Back to Menu</a>
+    <div class="page-title">Works by Author 1</div>
+    <div class="container">
+        <a href="page1.html" class="box">
+            <div class="word">Keyword 1</div>
+            <div class="details">Author 1 • Date 1</div>
+        </a>
+        <a href="page4.html" class="box">
+            <div class="word">Keyword 4</div>
+            <div class="details">Author 1 • Date 4</div>
+        </a>
+        <!-- Add more boxes by Author 1 -->
+    </div>
+</body>
+</html>
+

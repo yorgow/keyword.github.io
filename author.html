@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works by Author</title>
+    <style>
+        /* Add your CSS here */
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back to Home</a>
+    <div class="page-title" id="authorName">Works by Author</div>
+    <div class="container" id="authorContainer"></div>
+
+    <script>
+        async function loadAuthorData() {
+            const author = new URLSearchParams(window.location.search).get('author');
+            const response = await fetch('data.json');
+            const data = await response.json();
+            const container = document.getElementById('authorContainer');
+            const authorName = document.getElementById('authorName');
+            
+            if (author) {
+                authorName.textContent = `Works by ${author}`;
+                data.forEach(item => {
+                    if (item.author.toLowerCase() === author.toLowerCase()) {
+                        const box = document.createElement('a');
+                        box.classList.add('box');
+                        box.href = item.page;
+                        box.innerHTML = `
+                            <div class="word">${item.keyword}</div>
+                            <div class="details">${item.author} • ${item.date}</div>
+                        `;
+                        container.appendChild(box);
+                    }
+                });
+            }
+        }
+
+        loadAuthorData();
+    </script>
+</body>
+</html>
