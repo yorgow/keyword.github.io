@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Your Website Name</title>
+    <title>All Authors</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +14,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
             background-color: #2c003e;
             color: #e0e0e0;
         }
@@ -61,42 +60,75 @@
             text-align: center;
             color: #d1b3ff;
         }
+        .profile-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        .services-container {
-            max-width: 1000px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 20px;
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #d1b3ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #3a005f;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .see-all-authors {
+            font-size: 16px;
+            color: #d1b3ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .see-all-authors:hover {
+            text-decoration: underline;
+        }
+
+        .author-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            max-width: 1200px;
+            margin: 20px;
         }
 
-        .service-box {
+        .author-box {
+            flex: 0 0 calc(33.333% - 20px);
             background-color: #3a005f;
             padding: 20px;
             margin: 10px;
-            flex: 0 0 calc(33.333% - 20px);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
             text-align: center;
-            color: #ffffff;
+            border-radius: 8px;
             transition: transform 0.2s;
         }
 
-        .service-box:hover {
+        .author-box:hover {
             transform: scale(1.05);
         }
 
-        .service-box h3 {
-            font-size: 24px;
+        .author-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
             margin-bottom: 15px;
-            color: #d1b3ff;
         }
 
-        .service-box p {
-            font-size: 16px;
-            color: #e0e0e0;
+        .author-box .author-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
         }
 
         footer {
@@ -107,7 +139,8 @@
             text-align: center;
             border-top: 2px solid #d1b3ff;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-            margin-top: 40px;
+            position: fixed;
+            bottom: 0;
         }
 
         footer a {
@@ -129,7 +162,7 @@
 
 <body>
     <header>
-        <div class="header-title">Keyword</div>
+        <div class="header-title">All Authors</div>
         <nav class="nav-menu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -138,38 +171,27 @@
         </nav>
     </header>
 
-    <div class="page-title">Our Services</div>
+    <div class="page-title">Meet Our Authors</div>
 
-    <div class="services-container">
-        <div class="service-box">
-            <h3>Service 1</h3>
-            <p>We are adding keywords everyday with every update</p>
+    <div class="author-container">
+        <!-- Author 1 -->
+        <div class="author-box">
+            <img src="LE.PNG" alt="Author 1">
+            <div class="author-name">Le Tony</div>
+            <p>Le Tony is known for Les Zabrino Club</p>
         </div>
-        <div class="service-box">
-            <h3>Service 2</h3>
-            <p>We are constantly optimizing our website</p>
+
+        <!-- Author 2 -->
+        <div class="author-box">
+            <img src="palacio.PNG" alt="Author 2">
+            <div class="author-name">Palacio</div>
+            <p>Palacio has contributed to the creation of Benji bebbew</p>
         </div>
-        <div class="service-box">
-            <h3>Service 3</h3>
-            <p>We teach you zabrinioh words .</p>
-        </div>
-        <div class="service-box">
-            <h3>Service 4</h3>
-            <p>Call us for a manwib contact</p>
-        </div>
-        <div class="service-box">
-            <h3>Service 5</h3>
-            <p>Manewib at you service 24/7</p>
-        </div>
-        <div class="service-box">
-            <h3>Service 6</h3>
-            <p>we added service 6 box just for the design</p>
-        </div>
-        <!-- Add more services as needed -->
+
     </div>
 
     <footer>
-        <p>&copy; 2024 Alkakeyword</p>
+        <p>&copy; 2024 AlkaKeywords</p>
         <p><a href="index.html">Back to Menu</a></p>
         <p>
             <a href="about.html">Privacy Policy</a> |
